@@ -42,17 +42,17 @@ const MyMap: React.FC = () => {
 
   // Lista completa de marcadores con sus canciones
   const markers = [
-    { position: [825, 325], name: 'Petal', trackUri: 'spotify:track:4jK3MCI7eGzzQmZtR3e3dc' },
-    { position: [1180, 240], name: 'Rust', trackUri: 'spotify:track:6V8eKpLPw56CX9xN8Zgr0c' },
-    { position: [703, 1031], name: 'Slate', trackUri: 'spotify:track:5Xg62JOw5D1WV2gQGxrz5d' },
-    { position: [1073, 995], name: 'Mau', trackUri: 'spotify:track:3R83aSVkmS569nBxl0Wq3Z' },
+    { position: [825, 325], name: 'Petalburg', trackUri: 'spotify:track:4jK3MCI7eGzzQmZtR3e3dc' },
+    { position: [1180, 240], name: 'Rustboro', trackUri: 'spotify:track:6V8eKpLPw56CX9xN8Zgr0c' },
+    { position: [703, 1031], name: 'Slateport', trackUri: 'spotify:track:5Xg62JOw5D1WV2gQGxrz5d' },
+    { position: [1073, 995], name: 'Mauville', trackUri: 'spotify:track:3R83aSVkmS569nBxl0Wq3Z' },
     { position: [1629, 1570], name: 'South', trackUri: 'spotify:track:4DMAjYb300X3ewkkS0117f' },
-    { position: [1498, 1730], name: 'Rousse', trackUri: 'spotify:track:5hR4sFG6T5aETXTN5HXz0j' },
-    { position: [1301, 1853], name: 'Lily', trackUri: 'spotify:track:6D8QyuZ0kvq9ZvDYnFwSE1' },
-    { position: [983, 2160], name: 'Soot', trackUri: 'spotify:track:6J9JB3h6sRwXDxE4YVVXRo' },
-    { position: [1134, 2374], name: 'Moss', trackUri: 'spotify:track:7vSNR4w34ZfXfpZJQdRZBh' },
-    { position: [970, 2554], name: 'Puri', trackUri: 'spotify:track:5UqOw7QUg9QHd2x4Vrnj3V' },
-    { position: [692, 2662], name: 'Ever', trackUri: 'spotify:track:5S2dqKoU2R8vSc5zn5Kq7k' }
+    { position: [1498, 1730], name: 'LaRousse', trackUri: 'spotify:track:5hR4sFG6T5aETXTN5HXz0j' },
+    { position: [1301, 1853], name: 'Lilycove', trackUri: 'spotify:track:6D8QyuZ0kvq9ZvDYnFwSE1' },
+    { position: [983, 2160], name: 'Sootopolis', trackUri: 'spotify:track:6J9JB3h6sRwXDxE4YVVXRo' },
+    { position: [1134, 2374], name: 'Mossdeep', trackUri: 'spotify:track:7vSNR4w34ZfXfpZJQdRZBh' },
+    { position: [970, 2554], name: 'Purika', trackUri: 'spotify:track:5UqOw7QUg9QHd2x4Vrnj3V' },
+    { position: [692, 2662], name: 'Evergrande', trackUri: 'spotify:track:5S2dqKoU2R8vSc5zn5Kq7k' }
   ];
 
   const centerPosition: [number, number] = [
