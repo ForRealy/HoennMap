@@ -36,3 +36,69 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 20px;
+  }
+}
+
+@keyframes sandstorm {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+.weather-overlay {
+  pointer-events: none;
+}
+
+.weather-rain {
+  background-image: linear-gradient(transparent, rgba(0, 0, 255, 0.1));
+  animation: rain 0.5s linear infinite;
+}
+
+.weather-heavy-rain {
+  background-image: linear-gradient(transparent, rgba(0, 0, 255, 0.2));
+  animation: rain 0.3s linear infinite;
+}
+
+.weather-sandstorm {
+  background-image: linear-gradient(transparent, rgba(194, 178, 128, 0.2));
+  animation: sandstorm 1s linear infinite;
+}
+
+.weather-harsh-sunlight {
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.1), transparent);
+}
+
+.weather-fog {
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.3));
+}
+
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-marker.blue {
+  background-color: rgba(0, 0, 255, 0.3);
+  border: 2px solid red;
+}
+
+.custom-marker.green {
+  background-color: rgba(0, 255, 0, 0.3);
+  border: 2px solid yell;
+}
+
+.custom-marker.red {
+  background-color: rgba(255, 0, 0, 0.3);
+  border: 2px solid blue;
+}
