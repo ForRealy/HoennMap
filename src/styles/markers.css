@@ -9,16 +9,16 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 }
 
-.custom-marker.blue {
-  background-color: #3b82f6 !important;
-}
-
-.custom-marker.green {
-  background-color: #22c55e !important;
-}
-
 .custom-marker.red {
   background-color: #ef4444 !important;
+}
+
+.custom-marker.yellowgreen {
+  background-color: #9acd32 !important;
+}
+
+.custom-marker.blue {
+  background-color: #3b82f6 !important;
 }
 
 .popup-content {

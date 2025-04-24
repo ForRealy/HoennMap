@@ -50,8 +50,22 @@ const CustomMarker: React.FC<{
   const [pokemon, setPokemon] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const getMarkerColor = () => {
+    console.log('City type:', city.type);
+    switch (city.type) {
+      case 'Major City':
+        return 'red';
+      case 'Towns and Villages':
+        return 'yellowgreen';
+      case 'Landmarks and Locations':
+        return 'blue';
+      default:
+        return 'blue';
+    }
+  };
+
   const markerIcon = L.divIcon({
-    className: `custom-marker ${city.color}`,
+    className: `custom-marker ${getMarkerColor()}`,
     html: '',
     iconSize: [20, 20],
   });
