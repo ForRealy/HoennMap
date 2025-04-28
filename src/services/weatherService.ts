@@ -86,13 +86,13 @@ export const getRealWeather = async (lat: number, lon: number): Promise<HoennWea
 
 // Helper function to map real weather to Hoenn weather
 const mapToHoennWeather = (weather: WeatherData): HoennWeather => {
-  const { main, humidity, windSpeed } = weather;
+  const { main, humidity, windSpeed, temperature } = weather;
   
   console.log('Mapping weather data:', {
     main,
     humidity,
     windSpeed,
-    temperature: weather.temperature
+    temperature
   });
   
   // Heavy rain conditions
@@ -102,27 +102,40 @@ const mapToHoennWeather = (weather: WeatherData): HoennWeather => {
   }
   
   // Regular rain
-  if (main === 'Rain' || main === 'Drizzle') {
+  if (main === 'Rain' || main === 'Drizzle' || humidity > 70) {
     console.log('Mapped to rain');
     return 'rain';
   }
   
   // Sandstorm (high wind and dry conditions)
-  if (windSpeed > 8 && humidity < 30) {
+  if ((windSpeed > 8 && humidity < 30) || (main === 'Dust' || main === 'Sand')) {
     console.log('Mapped to sandstorm');
     return 'sandstorm';
   }
   
   // Harsh sunlight (clear and hot)
-  if (main === 'Clear' && weather.temperature > 30) {
+  if ((main === 'Clear' && temperature > 30) || (main === 'Clear' && humidity < 40)) {
     console.log('Mapped to harsh-sunlight');
     return 'harsh-sunlight';
   }
   
   // Fog
-  if (main === 'Fog' || main === 'Mist' || main === 'Haze') {
+  if (main === 'Fog' || main === 'Mist' || main === 'Haze' || (humidity > 90 && windSpeed < 3)) {
     console.log('Mapped to fog');
     return 'fog';
+  }
+  
+  // Clear weather with some variation based on conditions
+  if (main === 'Clear' || main === 'Clouds') {
+    // Add some randomness to clear weather based on conditions
+    const random = Math.random();
+    if (humidity > 80 && random < 0.3) {
+      return 'fog';
+    } else if (temperature > 25 && random < 0.4) {
+      return 'harsh-sunlight';
+    } else if (windSpeed > 5 && random < 0.2) {
+      return 'sandstorm';
+    }
   }
   
   console.log('Mapped to clear (default)');
