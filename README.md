@@ -109,7 +109,9 @@ The application will open in your default browser at `http://localhost:3000`.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is released into the public domain under the terms of the Unlicense. This means you can use, modify, and distribute this code for any purpose, including commercial applications, without any restrictions.
+
+For more information, see the [Unlicense](http://unlicense.org/).
 
 ## Acknowledgments
 
