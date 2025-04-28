@@ -27,7 +27,7 @@ An interactive map of the Hoenn region from Pokémon, featuring real-time weathe
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/HoennMap.git
+git clone https://github.com/ForRealy/HoennMap.git
 cd HoennMap
 ```
 
