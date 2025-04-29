@@ -38,7 +38,7 @@ npm install
 yarn install
 ```
 
-3. Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+3. Create a `.env` file in the src directory and add your OpenWeatherMap API key:
 ```
 REACT_APP_WEATHER_API_KEY=your_api_key_here
 ```
